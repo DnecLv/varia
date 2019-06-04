@@ -7,7 +7,8 @@ var exp = new Vue({
     data: {
         data,
         name: 'Dnec',
-        trys: '',
+        trys: 'mei yong',
+        styles: "<b style='color:red;text-decoration:underline'> 这是v-html</b>"
     },
     created: function () {
         // `this` 指向 vm 实例

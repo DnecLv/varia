@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mustache</title>
+</head>
+<body>
+    <ul id="app">
+        <h1><a>模板语法的常识</a></h1>
+        <h3><a>双大括号是最基础的模板语法</a></h3>
+        <h3><a>v-once 会使得数据呈现初始状态，当数据改变时，插值处的内容不会更新</a></h3>
+        <li v-once>这个将不会改变: {{ trys }}</li>
+        <li>这个将会改变: {{ trys }}</li>
+        <h3><a>v-html是插入html中的标准标签 </a></h3>
+        <li>我用v-html在后面写了一句话，这是在Mustache.js中写的<span v-html="styles"></span></li>
+        <h3><a>v-bind用来绑定属性，可以简写成":"</a></h3>
+    </ul>
+    <!-- <div id="app">
+        <span v-once>{{ data.acc }}</span><br>
+        <span v-once>这个将不会改变: {{ name }}</span>
+    </div> -->
+    <script src="lib/vue.js"></script>
+    <script src="js/Mustache.js"></script>
+</body>
+</html>
