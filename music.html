@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music</title>
+</head>
+<body>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <div id="app">
+      <span>nice to meet u u u{{name}}</span></br> 
+      <a href="tutorial.html"> this</a>
+    </div> -->
+    <!-- <div id="app-2">
+      <span :title="message">
+        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+      </span>
+    </div> -->
+    <!-- <div id ="app-3">
+      <img @click="changes" :src="'img/'+index+'.jpg'" alt="" >
+    </div> -->
+    <!-- <div id ="app-4">
+      <input type="button" value="获取笑话" @click="getjoke">
+      <p>{{joke}}</p>
+    </div> -->
+    <!-- <div id ="app-5">
+      <input type="text" @keyup.enter="search" placeholder="请输入要查询的天气" v-model="city">
+      <button type="button" @click="change('北京')">北京</button>
+      <ul>
+        <li v-for="item in weatherList">
+          {{ item.type }}
+        </li>
+      </ul>
+    </div> -->
+    <div id="musictype">
+      <input type="text" v-model="query" @keyup.enter="searchMusic">
+      <p>{{isPlaying}}</p>
+      <li v-for="(item,index) in musiclist">
+        <div v-if="index<3">
+          <a herf="" @click="playMusic(item.id)">{{ item.name }}</a>
+        </div>
+      </li>
+      <audio controls="" autoplay="" :src="musicUrl" @play="play" @pause="pause"></audio>
+      <dl v-for="item in hotComments">
+        <dt><img :src="item.user.avatarUrl" alt=""></dt>
+        <dd>{{item.nickname}}</dd>
+        <dd>{{item.content}}</dd>
+      </dl>
+      <img :src="musicCover" alt="">
+    </div>
+    <script src="lib/vue.js"></script>
+    <script>
+      
+    </script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/music.js"></script>
+</body>
+</html>
